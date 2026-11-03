@@ -1,0 +1,36 @@
+# Binarios generados por Delphi
+*.exe
+*.bpl
+*.bpi
+*.dcp
+*.drc
+*.map
+*.dres
+*.rsm
+*.tds
+*.dcu
+*.obj
+*.o
+
+# Ficheros locales del IDE (por usuario)
+*.local
+*.identcache
+*.projdata
+*.tvsconfig
+*.dsk
+*.delphilsp.json
+*.stat
+
+# Historial y copias del IDE
+__history/
+__recovery/
+*.~*
+*.cbk
+
+# Binario de terceros: libpdfium.dll se conserva (no se regenera con el build de Delphi;
+# sus fuentes y la receta de gn estan en libPDFium/). El resto de .dll, fuera.
+*.dll
+!libpdfium.dll
+
+# Configuracion local de Claude Code
+.claude/settings.local.json
