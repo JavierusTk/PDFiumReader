@@ -418,6 +418,7 @@ begin
   FWordHighlights.Free;
 
   FSelBmp.Free;
+  ClearPages;   // libera los TPDFPage: cada IPDFPage retiene el documento y, con el, el fichero abierto
   FPages.Free;
   inherited;
 end;
