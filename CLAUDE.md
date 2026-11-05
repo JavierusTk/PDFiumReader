@@ -1,15 +1,17 @@
-# CLAUDE.md
+﻿# CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
+
+**ARCHIVADO (2026-11-05).** PDFiumReader (GPL-3.0) ya no forma parte de ningún paquete ni ejecutable de CyberMAX: el visor es `TVisorPDFG2K` (`W:/Gestion2000/VisorPDFG2K.pas`, sobre PdfiumLib MPL + TPDFiumControl MIT). Todo el contenido vive en `archivados/` solo como referencia histórica; no se compila ni se distribuye.
 
 PDFiumReader is a Delphi VCL application that provides a PDF viewer using the custom libPDFium.dll library. The project demonstrates integration of the PDFium rendering engine with Delphi through a COM-like interface wrapper.
 
 ## Project Structure
 
 ```
-/mnt/w/PDFiumReader/
+/mnt/w/PDFiumReader/archivados/
 ├── src/                    # Source code files
 │   ├── PDFiumReader.dpr    # Main project file
 │   ├── PDFiumReader.dproj  # RAD Studio project configuration
@@ -29,7 +31,7 @@ PDFiumReader is a Delphi VCL application that provides a PDF viewer using the cu
 ### Compiling the Project
 Compile with `delphi-compiler.exe` (in `W:/bin`, on PATH); decide pass/fail by its exit code:
 ```bash
-delphi-compiler.exe W:/PDFiumReader/src/PDFiumReader.dproj
+delphi-compiler.exe W:/PDFiumReader/archivados/src/PDFiumReader.dproj
 ```
 
 ### Project Dependencies
@@ -93,7 +95,7 @@ pdf.LoadFromFile('document.pdf', nil);
 4. Modify pdfium/BUILD.gn to include libpdfium
 5. Build with: `ninja -C out libpdfium`
 
-See `/mnt/w/PDFiumReader/libPDFium/readme.md` for detailed instructions.
+See `/mnt/w/PDFiumReader/archivados/libPDFium/readme.md` for detailed instructions.
 
 ## Development Notes
 
